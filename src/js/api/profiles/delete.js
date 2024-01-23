@@ -13,5 +13,3 @@ export async function deleteProfile(name) {
 
   throw new Error(response.statusText);
 }
-
-console.log('test');
