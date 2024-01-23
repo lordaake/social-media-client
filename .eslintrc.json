@@ -54,8 +54,7 @@
       }
     ],
     "linebreak-style": [
-      "error",
-      "windows"
+      "off"
     ]
   }
 }
