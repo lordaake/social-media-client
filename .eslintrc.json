@@ -1,35 +1,25 @@
 {
   "env": {
     "browser": true,
-    "es2021": true,
-    "jest": true
+    "es2021": true
   },
   "extends": [
     "eslint:recommended",
-    "plugin:prettier/recommended",
-    "plugin:jest/recommended"
+    "plugin:prettier/recommended"
   ],
   "plugins": [
     "jest"
   ],
   "overrides": [
     {
-      "env": {
-        "node": true
-      },
-      "files": [
-        ".eslintrc.{js,cjs}"
-      ],
-      "parserOptions": {
-        "sourceType": "script"
-      }
-    },
-    {
       "files": [
         "**/*.test.js"
       ],
       "env": {
-        "jest": true
+        "jest": true,
+        "node": true,
+        "browser": true,
+        "es2021": true
       },
       "plugins": [
         "jest"
@@ -43,18 +33,20 @@
     }
   ],
   "parserOptions": {
-    "ecmaVersion": "latest",
+    "ecmaVersion": 2022,
     "sourceType": "module"
   },
   "rules": {
+    "semi": [
+      "error",
+      "always"
+    ],
     "prettier/prettier": [
       "error",
       {
-        "endOfLine": "auto"
+        "endOfLine": "crlf"
       }
     ],
-    "linebreak-style": [
-      "off"
-    ]
+    "linebreak-style": "off"
   }
 }
