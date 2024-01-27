@@ -15,6 +15,7 @@ describe('logout function', () => {
   });
 
   it('clears the token from browser storage', () => {
+    expect.hasAssertions();
     logout();
 
     expect(localStorage.removeItem).toHaveBeenCalledWith('token');
