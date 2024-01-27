@@ -36,10 +36,6 @@
   "rules": {
     "semi": ["error", "always"],
     "prettier/prettier": ["error", { "endOfLine": "crlf" }],
-    "linebreak-style": "off",
-    "cypress/no-unnecessary-waiting": [
-      "warn",
-      { "exceptions": ["cy.wait()"] }
-    ]
+    "linebreak-style": "off"
   }
 }
