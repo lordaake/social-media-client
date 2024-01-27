@@ -1,6 +1,0 @@
-{
-    "testEnvironment": "jsdom",
-    "testMatch": ["**/*.test.js"],
-    "setupFilesAfterEnv": ["./testSetup.js"]
-  }
-  
