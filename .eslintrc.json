@@ -1,37 +1,32 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "cypress/globals": true
   },
   "globals": {
-    "global": "writable"
+    "global": "readonly"
   },
   "extends": [
     "eslint:recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:cypress/recommended"
   ],
-  "plugins": [
-    "jest"
-  ],
+  "plugins": ["jest", "cypress"],
   "overrides": [
     {
-      "files": [
-        "**/*.test.js"
-      ],
+      "files": ["**/*.test.js"],
       "env": {
         "jest": true,
         "node": true,
         "browser": true,
         "es2021": true
       },
-      "plugins": [
-        "jest"
-      ],
-      "extends": [
-        "plugin:jest/recommended"
-      ],
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/recommended"],
       "rules": {
-        "jest/prefer-expect-assertions": "off"
+        "jest/prefer-expect-assertions": "error",
+        "cypress/no-unnecessary-waiting": "off"
       }
     }
   ],
@@ -40,16 +35,12 @@
     "sourceType": "module"
   },
   "rules": {
-    "semi": [
-      "error",
-      "always"
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "crlf"
-      }
-    ],
-    "linebreak-style": "off"
+    "semi": ["error", "always"],
+    "prettier/prettier": ["error", { "endOfLine": "crlf" }],
+    "linebreak-style": "off",
+    "cypress/no-unnecessary-waiting": [
+      "warn",
+      { "exceptions": ["cy.wait()"] }
+    ]
   }
 }
