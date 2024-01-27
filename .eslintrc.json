@@ -5,7 +5,8 @@
     "cypress/globals": true
   },
   "globals": {
-    "global": "readonly"
+    "global": "readonly",
+    "jest": "readonly"
   },
   "extends": [
     "eslint:recommended",
