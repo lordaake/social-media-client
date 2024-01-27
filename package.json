@@ -14,7 +14,8 @@
     "test": "npm run test-unit",
     "test-unit": "jest",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "test:e2e": "npm run cypress:run"
   },
   "keywords": [],
   "author": "Noroff",
