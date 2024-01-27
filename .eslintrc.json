@@ -25,8 +25,7 @@
       "plugins": ["jest"],
       "extends": ["plugin:jest/recommended"],
       "rules": {
-        "jest/prefer-expect-assertions": "error",
-        "cypress/no-unnecessary-waiting": "off"
+        "jest/prefer-expect-assertions": "error"
       }
     }
   ],
