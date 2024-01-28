@@ -2,27 +2,22 @@ describe('logout', () => {
   beforeEach(() => {
     cy.visit('index.html');
     cy.clearAllLocalStorage();
-    // eslint-disable-next-line cypress/no-unnecessary-waiting
+    /* eslint-disable cypress/no-unnecessary-waiting */
     cy.wait(2100);
     cy.get("form[id='registerForm']").within(() => {
       cy.get("button[data-bs-target='#loginModal']:visible").click();
     });
-    // eslint-disable-next-line cypress/no-unnecessary-waiting
     cy.wait(1200);
     cy.get('#loginModal #loginEmail').should('exist');
     cy.get('#loginModal #loginPassword').should('exist');
     cy.get('#loginModal #loginEmail').type('ugabuga@noroff.no');
-    // eslint-disable-next-line cypress/no-unnecessary-waiting
     cy.wait(600);
     cy.get('#loginModal #loginPassword').type('Ugabuga88-');
-    // eslint-disable-next-line cypress/no-unnecessary-waiting
     cy.wait(600);
     cy.get("button[type='submit']:visible").click();
-    // eslint-disable-next-line cypress/no-unnecessary-waiting
     cy.wait(2100);
     cy.get(window.localStorage.getItem('profile')).should('not.be.empty');
     cy.get(window.localStorage.getItem('token')).should('not.be.empty');
-    // eslint-disable-next-line cypress/no-unnecessary-waiting
     cy.wait(2100);
   });
 
