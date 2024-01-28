@@ -43,20 +43,26 @@ Cypress is used for end-to-end (E2E) testing, validating the entire application 
 To begin, follow these steps:
 
 1. Clone the repository:
-   gh repo clone https://github.com/lordaake/social-media-client
+   git clone "https://github.com/lordaake/social-media-client"
 
 2. Initialize Git:
    git init
 
 3. Install project dependencies:
-   npm install
+   npm run prepare
+
+4. Check if jest tests work:
+   npm run test
+
+5. Check cypress tests:
+   npm run cypress:open
 
 ### Running Tests
 
 We provide options for running tests:
 
 - To run Jest unit tests:
-  npm run test-unit
+  npm run test
 
 - To open the Cypress testing interface:
   npm run cypress:open
