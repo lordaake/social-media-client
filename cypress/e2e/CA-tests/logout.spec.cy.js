@@ -23,7 +23,7 @@ describe('logout', () => {
 
   it('can log out with the logout button', () => {
     // Click the available logout button
-    cy.get("button[data-auth='logout']:visible").click();
+    cy.get("button[data-auth='logout']:visible").click({ multiple: true});
 
     // Verify logout was successful
     cy.get("button[data-auth='logout']:visible").should('not.exist', {
