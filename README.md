@@ -51,12 +51,6 @@ To begin, follow these steps:
 3. Install project dependencies:
    npm run prepare
 
-4. Check if jest tests work:
-   npm run test
-
-5. Check cypress tests:
-   npm run cypress:open
-
 ### Running Tests
 
 We provide options for running tests:
