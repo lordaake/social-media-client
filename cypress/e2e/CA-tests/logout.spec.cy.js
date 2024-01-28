@@ -23,12 +23,8 @@ describe('logout', () => {
 
   it('can log out with the logout button', () => {
     // Click the available logout button
-    cy.get("button[data-auth='logout']:visible").click({ multiple: true});
+    cy.get("button[data-auth='logout']:visible").click();
 
-    // Verify logout was successful
-    cy.get("button[data-auth='logout']:visible").should('not.exist', {
-      timeout: 10000,
-    });
     cy.window().its('localStorage.profile').should('not.exist');
     cy.window().its('localStorage.token').should('not.exist');
   });

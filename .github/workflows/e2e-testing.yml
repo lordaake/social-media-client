@@ -18,12 +18,3 @@ jobs:
           browser: electron
           cache-key: ${{ runner.os }}-cypress-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Upload Cypress Artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: cypress-artifacts
-          path: |
-            cypress/videos/
-            cypress/screenshots/
-            cypress/logs/
-
