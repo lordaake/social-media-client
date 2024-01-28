@@ -1,0 +1,1 @@
+global.save = jest.fn();
