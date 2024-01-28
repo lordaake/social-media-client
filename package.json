@@ -10,7 +10,7 @@
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint --fix src/**/*.js",
     "format": "prettier --write \"src/**/*.{js,css,scss}\"",
-    "prepare": "husky install",
+    "prepare": "npm install --save-dev jest cypress && husky install",
     "test": "npm run test-unit",
     "test-unit": "jest",
     "cypress:open": "cypress open",
